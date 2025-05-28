@@ -1,0 +1,5 @@
+{
+  "name": "Tank Battle Game",
+  "description": "A 2D tank battle game where the player controls a tank to destroy enemy tanks on a map with destructible walls.",
+  "requestFramePermissions": []
+}
