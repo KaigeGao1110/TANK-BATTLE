@@ -7,24 +7,22 @@ interface BaseProps {
 }
 
 const Base: React.FC<BaseProps> = ({ base }) => {
-  const { x, y, width, height } = base;
+  const { x, y, width, height, color } = base;
 
-  // Simplified rendering for debugging: A solid red square
+  // Render base using provided color classes
   return (
     <div
+      className={`absolute flex items-center justify-center text-xs font-bold ${color}`}
       style={{
-        position: 'absolute',
         left: x,
         top: y,
-        width: width,
-        height: height,
-        backgroundColor: 'red',
-        border: '2px solid black',
-        zIndex: 10, // Ensure it's reasonably high in stacking context
+        width,
+        height,
+        zIndex: 10,
       }}
-      aria-label="Game Base (Debug)"
+      aria-label="Game Base"
     >
-      <span style={{color: 'white', fontSize: '10px', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%'}}>B</span>
+      B
     </div>
   );
 };
